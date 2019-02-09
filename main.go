@@ -94,5 +94,5 @@ func main() {
 
 	router.HandleFunc("/nutrition/", GetNutrition).Methods("GET")
 
-	log.Fatal(http.ListenAndServe(":8000", router))
+	log.Fatal(http.ListenAndServe(":80", router))
 }
