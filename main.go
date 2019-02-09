@@ -44,11 +44,10 @@ func addFood() {
 			continue
 		}
 
-		dataString := string(data)
+		dataString := strings.Replace(string(data), "\r", "", 1000);
 		dataStrings := strings.Split(dataString, "\n")
 
 		if len(dataStrings) > 5 {
-
 			calories, err := strconv.ParseFloat(dataStrings[1], 64);
 			if err != nil {
 				log.Println(err)
